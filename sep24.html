@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        color: yellow;
+        height: 50px;
+        background-color: rebeccapurple;
+    }
+    img{
+        height: 300px;
+    }
+    body{
+        background-color: black;
+    }
+</style>
+<body id="body">
+    <p style="background-color: rebeccapurple;" id="demo1"></p>
+    <p id="today"></p>
+
+    <p style="display: none;" id="hidden">This text was hidden!</p>
+    <button onclick="document.getElementById('hidden').style.display='block'">Show the hidden text</button>
+
+    <div>
+        <img id="bulb" src="/bulb_off.png" alt="">
+    </div>
+    <div>
+        <button onclick="document.getElementById('bulb').src = '/bulb_on.png'; document.getElementById('body').style.backgroundColor='Yellow';">On</button>
+        <button>Off</button>
+    </div>
+    <p id="para4"></p>
+    <button id="printBtn" onclick="print()">Print this page</button>
+</body>
+<script>
+    // Single line comment
+    /*
+        Multi line
+        comments
+    */
+    document.getElementById('demo1').innerText = 'Hello World!';
+    document.getElementById('demo1').style.fontSize = '2rem';
+
+    document.getElementById('today').innerText = Date();
+</script>
+<script src="sep24.js"></script>
+</html>
