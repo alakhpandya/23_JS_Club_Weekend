@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // let myString = "Hello";
+    // let yourString = myString.padEnd(10, "o");
+    // console.log(yourString);
+
+    // if-else
+    /*
+    if (condition){
+        code statement;
+    }
+    else if (condition){
+        code statement 2;
+    }
+    else{
+        code statement 3;
+    }
+    */
+
+    /*
+    par = 8, srokes = 2,3,4,5 or 6, 
+        Strokes         Score
+        1               Hole-in-one
+        <= par -2       Eagle
+        par - 1         Birdie
+        par             Par
+        par + 1         Bogey
+        par + 2         Double Bogey
+        >= par + 3      Go Home
+    */
+    
+    // Arrays
+    /*
+    let myArray = [12, 34, "array", 23.5];
+    let yourArray = [34, 12, 23.5, "array"];
+    // let ourArray = [12, 34, "array", 23.5];
+    // console.log(myArray);
+    console.log(myArray.length);
+    console.log(myArray[2]);
+    myArray[2] = 35;
+    console.log(myArray);
+    myArray = ["Mumbai", "Ahmedabad", "Surat"];
+    console.log(myArray);
+
+    // Nested arrays:
+    let herArray = [
+        ["potato", "tomato", "capcicum"],
+        ["apple"],
+        [14, 67, 33, 12, 47],
+        [
+            ["DDLJ", "Inception", "L&H"],
+            ["Yellow", "Purple", "Black", "Blue"]
+        ]
+    ];
+
+    console.log(herArray[3][0][1]);
+
+    let hisArray = [15, 19, -24, 0, 31];
+    // hisArray.push(50);
+    let last_element = hisArray.pop();
+    // console.log(hisArray);
+    // console.log(last_element);
+
+    // shift
+    // hisArray.unshift(2);
+    let first_ele = hisArray.shift();
+    console.log(hisArray);
+    console.log(first_ele);
+    */
+
+    // Objects
+    /*
+    let result = { "Physics9" : 45, Maths2 : 47, "Java Script" : 50, '007_James_Bond' : 49 }
+    console.log(result.Maths2);
+    console.log(result["007_James_Bond"]);
+    console.log(result["Java Script"]);
+
+    console.log(result["Physics9"]);
+    console.log(result["Maths2"])
+
+    result = {
+        first_test : {
+            "Physics" : 42,
+            "Maths" : 41
+        },
+        mid_term : {
+            "Java script" : 50
+        }
+    }
+    console.log(result.first_test.Maths);
+    result = {
+        Physics : [43, 45, 48],
+        "Java Script" : [50, 50, 100],
+    }
+    console.log(result["Java Script"][2]);
+    */
+
+    // const PI = 3.1415;
+    /*
+    const result = { "Physics9" : 45, Maths2 : 47, "Java Script" : 50, '007_James_Bond' : 49 }
+    
+    Object.freeze(result);
+
+    result["Physics9"] = 49;
+    delete result["Physics9"];
+    console.log(result);
+    result["Physics"] = 108;
+
+    console.log(result);
+    // result = { "Python" : 40, Maths2 : 47 };
+
+    // const myArray = [15,42,63,34,95];
+    let myArray = [15,42,63,34,95];
+    Object.freeze(myArray);
+    myArray[3] = 100;
+    myArray = [1,2,3,4];
+    console.log(myArray);
+    // console.log(typeof(myArray));
+    */
+
+    let myCollections = [
+        {
+            "artist":"2 unlimited",
+            "title":"no limit",
+            "release_year":1991,
+            "formats":[
+                "cassate",
+                "cd",
+                "mp3",
+                "youtube"
+            ],
+            "genre":"rap"
+        },
+
+        {
+            "artist":"Kungs",
+            "title":"this girl",
+            "release_year":2016,
+            "formats":[
+                "mp3",
+                "youtube"
+            ],
+            "genre":"remix"
+        }
+    ]
+    console.log(myCollections[0].formats[1]);
+
+</script>
+</html>
+
+<!-- 
+    Next Lecture: Mind granaeds, objects as lookup table, functions 
+ -->
