@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Loops: for, while & do while
+    /*
+    let i;
+    for(i = 0; i < 5; i++){
+        // code
+        console.log("Break is over...");
+    }
+    console.log(i);
+    // while loop:
+    let n = Number(prompt("Enter n:")); // 25
+    let digits=0, temp = Math.abs(n);
+    
+    while (temp > 0){
+        temp = Math.floor(temp/10);
+        digits++;
+    }
+    
+    do{
+        temp = Math.floor(temp/10);
+        digits++;
+    }while (temp > 0);
+    console.log(digits);
+    */
+    // Write a program to create a user-defined array.
+
+    // Find and log the sum of the following array using a different loop:
+    var anArray = [15, 16, 17, 18, 19, 20];
+
+    // What will be the output of the following code?
+    
+    function testFunc(arr){
+        var temp = 1;
+        for (var i = 0; i < arr.length; i++){
+            for (var j = 0; j < arr[i].length; j++){
+                temp *= arr[i][j];
+            }
+        }
+        return temp;
+    }
+
+    var sampleArray = [
+        [1,2],
+        [3,4],
+        [5,6,7]
+    ];
+    answer = testFunc(sampleArray);
+    console.log(answer);
+</script>
+</html>

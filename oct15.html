@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    function printHello (){
+        console.log("Hello World!");
+    }
+    function average(a, b){
+        'use strict';
+        let c;
+        c = (a + b)/2;
+        return c;
+    }
+
+    printHello();
+    console.log(average(20, 30));
+
+
+
+    let myDog = {
+        name:"Frisky",
+        legs:4,
+        tails:1,
+        bark:"Woof",
+        friends:["Everyone!"]
+    }
+    // console.log(myDog["name"]);
+    console.log(myDog["horns"]);
+
+    console.log(myDog.hasOwnProperty('name'));
+    console.log(myDog.hasOwnProperty('horns'));
+
+    function propertyChecker(obj, prop){
+        if (obj.hasOwnProperty(prop)){
+            console.log(obj[prop]);
+        }
+        else{
+            console.log("Sorry, this object does not have the said property...");
+        }
+    }
+
+    propertyChecker(myDog, "horns");
+    propertyChecker(myDog, "friends");
+    propertyChecker(myDog, "bark");
+    
+    var collection = {
+    "2548" : {
+        "album" : "Slippery When Wet",
+        "artist" : "Bon Jovi",
+        "tracks" : [
+            "Let It Rock",
+            "You Give Love a Bad Name"
+        ]
+    },
+    "2468" : {
+        "album" : "1999",
+        "artist" : "Prince",
+        "tracks" : [
+            "1999",
+            "Little Red Corvette"
+        ]
+    },
+    "1245" : {
+        "artist" : "Robert Palmer",
+        "tracks" : [ ]
+    },
+    "5439" : {
+        "album" : "ABBA Gold"
+    }
+}
+
+function updateRecords(id, prop, value){
+    // Your code goes here
+    return collection;
+}
+
+// Write a function (updateRecords), where user can pass id (eg. "2548"), property (eg. "artist") and value (eg. "MJ"), that updates the value of the property of the given id in the collection and return the updated collection. If user passes the empty string as value, the function should completely delete that property. If the property is an array then the function should just add the value at the end of that property's array.
+
+// Test Cases:
+// collection = updateRecords(5439, "album", "The Visitors"); console.log(collection);
+// collection = updateRecords(2548, "album", ""); console.log(collection);
+// collection = updateRecords(5439, "artist", "ABBA"); console.log(collection);
+// collection = updateRecords(2468, "tracks", "Lady Cab Driver"); console.log(collection);
+</script>
+</html>
