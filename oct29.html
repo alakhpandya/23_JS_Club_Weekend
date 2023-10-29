@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Anonymous functions/Arrow Functions
+    /*
+    A different way to create a function in js
+
+    function today(){
+        return Date();
+    }
+    console.log(today());
+
+    let today = function(){
+        return Date();
+    };
+    console.log(today());
+    */
+
+    // Arrow function
+    /*
+    let today = () => {
+        return Date();
+    };
+    console.log(today());
+    */
+    /*
+    let absoluteAddition = (x, y) => {
+        return Math.abs(x) + Math.abs(y);
+    };
+    console.log(absoluteAddition(150, -150));
+
+    // Shortening the arrow function
+    let today = () => Date();
+
+    console.log(today())
+    */
+
+    // let absoluteAddition = (x, y) => Math.abs(x) + Math.abs(y);
+    // console.log(absoluteAddition(20, -30));
+
+    /*
+    (x, y) => Math.abs(x) + Math.abs(y);
+
+    let myArray = [1, 4, 3, 9, 5, 7];
+    myArray.map((x) => x*x)
+
+    let transactions = [1000, -200, 400, -550, 750, 300, 250, -1250, -800, 600];
+    let totalAmountTransacted = transactions.reduce((x, y) => {
+        let a = Math.abs(x);
+        let b = Math.abs(y);
+        return a + b;
+    });
+
+
+    function join(p, q){
+        return p + q;
+    }
+    let words = ["I", "Love", "Bharat", "!"];
+    let sentence = words.reduce(join);
+    console.log(sentence);
+
+    sentence = words.reduce((p, q) => p + q);
+    */
+
+    // More about functions
+    // default arguments
+    /*
+    let incrementor = (a, b=1) => a+b;
+
+    console.log(incrementor(5));
+    console.log(incrementor(5, 3));
+    */
+    // Variable length arguments
+    'use strict';
+    /*
+    let avg = (a, b, c=5, ...args) => {
+        // console.log(a);
+        // console.log(args);
+        if (args.length == 0){
+            return a;
+        }
+        let n = args.length + 1;
+        let ans = a;
+        for(let i = 0; i < args.length; i++){
+            ans += args[i];
+        }
+        return ans/n;
+    }
+
+    console.log(avg(2));
+    console.log(avg(2, 5));
+    console.log(avg(2, 5, 6, 9, 10));
+    */
+    // rest operator
+    /*
+    let arr1 = ["Jan", "Feb", "Mar", "Apr", "May"];
+    let arr2 = arr1;    // Shallow copy
+    let arr3 = [...arr1];   // Deep copy
+
+    arr1.push("June");
+    console.log(arr1);
+    console.log(arr2);
+    console.log(arr3);
+    */
+
+    // Destructuring Assignment
+    /*
+    let result = {
+        "Physics" : 45,
+        "Maths" : 43,
+        "Computer" : 50
+    }
+    */
+    // let {Maths, Computer, Physics} = result;
+    // console.log(Physics);
+
+    // let {"Physics" : sub1, "Computer" : sub2} = result;
+    // console.log(sub1);
+
+    /*
+    const AVG_TEMPERATURES = {
+        today : 37,
+        tomorrow : 39.5,
+    };
+
+    function getTempOfTomorrow(avgTemperatures){
+        "use strict";
+
+        // Fetch tomorrow's temperature from avgTemperature using destructuring assignment here
+        const {tomorrow : tempOfTomorrow} = avgTemperatures;
+
+        return tempOfTomorrow;
+    }
+
+    console.log(getTempOfTomorrow(AVG_TEMPERATURES));
+    
+
+    const AVG_TEMPERATURES = {
+        today : 37,
+        tomorrow : 39.5,
+    };
+
+    function getTempOfTomorrow({tomorrow: tempOfTomorrow}){
+
+        return tempOfTomorrow;
+    }
+
+    console.log(getTempOfTomorrow(AVG_TEMPERATURES));
+    */
+
+    
+    const LOCAL_FORECAST = {
+        today : { min: 22, max: 38.5},
+        tomorrow : { min: 18.5, max: 34}
+    };
+
+    function getMaxOfTomorrow(forecast){
+        "use strict";
+        // Fetch maximum temperature of tomorrow from forecast here
+        return maxOfTomorrow;
+    }
+
+    console.log(getMaxOfTomorrow(LOCAL_FORECAST));
+</script>
+</html>

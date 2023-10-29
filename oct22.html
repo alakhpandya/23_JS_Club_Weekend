@@ -100,8 +100,18 @@
         return Math.abs(x) + Math.abs(y);
     }
 
-    let transactions = [1000, -200, 400, -550, 750, 300, 250, -1250, -800, 600];
+    let transactions = [-1000, -200, 400, -550, 750, 300, 250, -1250, -800, 600];
     let totalAmountTranscted;
     // Using the above function, calculate and print totalAmountTransacted
+    /*
+    totalAmountTranscted = transactions[0];
+    for (let i = 1; i < transactions.length; i++) {
+        totalAmountTranscted = absoluteAddition(totalAmountTranscted, transactions[i]);
+    }
+    */
+
+    // reduce
+    totalAmountTranscted = transactions.reduce(absoluteAddition);
+    console.log(totalAmountTranscted);
 </script>
 </html>
