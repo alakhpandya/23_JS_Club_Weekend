@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Math module
+    let r = Math.random();  // returns a random number in the interval [0, 1)
+    // console.log(r);
+    // Write a program that prints a random number in the interval [5, 6) on the console.
+    let t = Math.random() + 5;
+    
+    // Write a program that prints a random number in the interval [5, 12) on the console.
+    /*
+    min: 0 * 7 = 0 + 5 = 5
+    max: 0.999 * 7 = 6.9999 + 5 = 11.9999
+    */
+   t = Math.random() * 7 + 5;
+   
+   // Write a program that prints a random integer in the interval [13, 23) on the console.
+   t = Math.floor(Math.random() * 10 + 13);
+   console.log(t);
+
+    // Write a program that takes two integers from user, pass them to a function that calls them 'lower' & 'upper' respectively and returns a random integer in the interval [lower, upper). Log the returned integer on the console.
+
+
+    // Some useful built-in functions
+    // parseFloat()
+    // let n = "57.76";
+    // n = parseFloat(n);
+    // console.log(n + 1);
+
+    // parseInt()
+    // n = "49.98";
+    // n = parseFloat(n);
+    // n = parseInt(n);
+    // console.log(n + 1);
+
+    // Converting into another base using parseInt()
+    // let n = "1011";
+    // let b = parseInt(n, 2);
+    // n = "3557";
+    // b = parseInt(n, 8);
+    // n = "3A2C";
+    // b = parseInt(n, 16);
+    // console.log(b);
+
+    // Write missing lines in the following code so that it prints the array made up of squares of each number in myArray.
+    function square(x){
+        return x * x; 
+    }
+    let myArray = [1, 4, 3, 9, 5, 7];
+    /*
+    let squaredArray = [];
+    for (let i = 0; i < myArray.length; i++) {
+        squaredArray.push(square(myArray[i]));
+    }
+    */
+   
+    let squaredArray = myArray.map(square);
+    console.log(squaredArray);
+    // Write a function that returns the factorials of each number in 'myArray', using that function, log the array that is comprising of factorials of members of 'myArray'
+
+    function factorial(n){
+        let f;
+        // part-1 of your code goes here
+        return f;
+    }
+    
+    myArray = [1, 4, 3, 9, 5, 7];
+    let factorialArray = [];
+
+    // part 2 of your code goes here
+    console.log(factorialArray);
+
+    // Write missing lines in the following code so that it prints the array made up of only those numbers of 'myArray' for which the function 'checkForPositive' returns true.
+
+    function checkForPositive(x){
+        return x > 0;
+    }
+
+    myArray = [89, -34, 0, 12, -44, -2, -6, 8, 90, 105];
+    let positiveArray = myArray.filter(checkForPositive);
+
+    // your code goes here
+
+    console.log(positiveArray);
+
+    // HW:
+    /*
+
+    */
+    
+    function absoluteAddition(x, y){
+        return Math.abs(x) + Math.abs(y);
+    }
+
+    let transactions = [1000, -200, 400, -550, 750, 300, 250, -1250, -800, 600];
+    let totalAmountTranscted;
+    // Using the above function, calculate and print totalAmountTransacted
+</script>
+</html>
