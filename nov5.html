@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    let myArray = [3,6,10];
+    // const [a, b, c] = myArray;
+
+    let yourArray = [1,2,3,4,5,6,7,8,9];
+    // const [a, b] = yourArray;
+    let [a, , , b] = yourArray;
+    console.log(a);
+    console.log(b);
+    [a, b] = [b, a];
+    console.log(a);
+    console.log(b);
+    
+    const removeFirstTwo = (arr) => {
+        "use strict";
+        let args;
+        [, , ...args] = arr;
+        return args;
+    }
+
+    let ourArray = removeFirstTwo(yourArray);
+    console.log(ourArray);
+    */
+
+    // class work:
+    // Write a function 'halfRange' that will return half-range of the given statistical object.
+    // half-range of a statistical object is defined as the half of the difference of the maximum and minimum observations of that object.
+    /*
+    const halfRange = ({max, min}) => {
+        let hr = (max-min)/2;
+        // console.log(hr);
+        return hr;
+    }
+    const halfRange2 = (stats) => {
+        (stats.max - stats.min)/2;
+    }
+    // json: JavaScript Object Notation
+    const stats = {
+        max : 56.78,
+        standard_deviation : 4.34,
+        median : 34.54,
+        mode : 23.87,
+        min : -0.75,
+        average : 35.85
+    };
+    halfRange(stats);
+
+    // Template literals
+    let myString = `Name: "Alakh" 'Pandya'
+Company: Royal`
+    console.log(myString);
+    let person = {
+        name: "Nilay",
+        age: 19,
+        college: "LJ"
+    }
+    let stu = `Hi, my name is ${person.name}!
+I am ${person.age} years old and I'm from ${person.college} college.`
+    console.log(stu);
+    */
+    let users = [
+        {
+            name: "Het",
+            surname: "Patel",
+            "credit card no": "9568 1673 5879 2224",
+            "total limit": 300000,
+            "amount spent": 75000,
+            "due date": "23/11/2023"
+        },
+        {
+            name: "Jay",
+            surname: "Patel",
+            "credit card no": "9568 1678 5579 2224",
+            "total limit": 500000,
+            "amount spent": 80000,
+            "due date": "20/11/2023"
+        },
+        {
+            name: "Shalvi",
+            surname: "Modi",
+            "credit card no": "1234 1673 5879 2224",
+            "total limit":1000000,
+            "amount spent": 100000,
+            "due date": "2/12/2023"
+        }
+    ]
+    const sendMail = (users) => {
+        "use strict";
+        let mail, interest, totalAmount, minAmount, availableLimit;
+        for(let i = 0; i < users.length; i++){
+            interest = users[i]["amount spent"] * 0.18
+            totalAmount = interest + users[i]["amount spent"]
+            availableLimit = users[i]["total limit"] - totalAmount
+            mail = `
+            Dear ${users[i].name},
+            Greetings from Royal Bank credit card department!
+            
+            Please find your account summary as below:
+            Credit Card No: ${users[i]["credit card no"]}
+            Total Limit: ${users[i]["total limit"]}
+            Amount spent last month: ${users[i]["amount spent"]}
+            Interest: ${interest}
+            Total amount due: ${totalAmount}
+            Min amount due: ${totalAmount * 0.15}
+            Available limit: ${availableLimit}
+            Due date: ${users[i]["due date"]}
+            
+            Please make sure you make your payment before due date to avoid any penalties.
+            Thanks for putting trust on us! We value our relationship with you.
+
+            Team,
+            Royal Bank`;
+            console.log(mail);
+        }
+    }
+    // sendMail(users);
+
+    const sendMail2 = (users) => {
+        "use strict";
+        let emails = [];
+        let mail, interest, totalAmount, minAmount, availableLimit;
+        for(let i = 0; i < users.length; i++){
+            interest = users[i]["amount spent"] * 0.18
+            totalAmount = interest + users[i]["amount spent"]
+            availableLimit = users[i]["total limit"] - totalAmount
+            mail = `Dear ${users[i].name},
+Greetings from Royal Bank credit card department!
+
+Please find your account summary as below:
+Credit Card No: ${users[i]["credit card no"]}
+Total Limit: ${users[i]["total limit"]}
+Amount spent last month: ${users[i]["amount spent"]}
+Interest: ${interest}
+Total amount due: ${totalAmount}
+Min amount due: ${totalAmount * 0.15}
+Available limit: ${availableLimit}
+Due date: ${users[i]["due date"]}
+
+Please make sure you make your payment before due date to avoid any penalties.
+Thanks for putting trust on us! We value our relationship with you.
+
+Team,
+Royal Bank`;
+            emails.push(mail);
+        }
+        return emails;
+    }
+    console.log(sendMail2(users));
+
+    // Coding Challenge
+    /*
+    const result = {
+        success: ["max-length", "no-amd", "prefer-arrow-functions"],
+        failure: ["no-var", "var-on-top", "linebreak"],
+        skipped: ["id-blacklist", "no-dup-keys"]
+    };
+
+    function makeList(arr){
+        const resultDisplayArray = [];
+        for(let i = 0; i < arr.length; i++){
+            resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)
+        }
+        return resultDisplayArray;
+    }
+
+    console.log(makeList(result.skipped))
+    */
+    /*
+    Complete the above code so that the output is:
+    [
+        <li class="text-warning">no-var</li>,
+        <li class="text-warning">var-on-top</li>,
+        <li class="text-warning">linebreak</li>
+    ]
+    */
+</script>
+</html>
