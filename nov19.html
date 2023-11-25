@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    const createPerson = (name, age, gender) => {
+        return {
+            name : name,
+            age : age,
+            gender : gender
+        }
+    }
+    */
+    /*
+    const createPerson = (name, age, gender) => (
+        {
+            name : name,
+            age : age,
+            gender : gender
+        }
+    )
+    */
+
+    // concise object literal
+    const createPerson = (name, age, gender) => ({name, age, gender});
+
+    let Vrund = createPerson("Vrund Patel", 19, "M");
+    // console.log(Vrund);
+    let Dev = createPerson("Dev", 25, "M");
+    // console.log(Dev);
+
+    const bicycle = {
+        gear: 1,
+        // Declarative Function
+        changeGear: function(newGear){
+            'use strict';
+            // bicycle.gear = newGear;
+            this.gear = newGear;
+        }
+    }
+    const motorcycle = {
+        gear: 1,
+        // Concise Declarative Function
+        changeGear(newGear){
+            'use strict';
+            this.gear = newGear;
+        }
+    }
+
+    // console.log(bicycle.gear);
+    // bicycle.changeGear(5);
+    // console.log(bicycle.gear);
+
+    // console.log(motorcycle.gear);
+    // motorcycle.changeGear(2);
+    // console.log(motorcycle.gear);
+
+    // Constructor Function
+    /*
+    var spaceShuttle = function(targetPlanet){
+        this.targetPlanet = targetPlanet;
+    }
+
+    var zeus = new spaceShuttle("Jupiter");
+    console.log(zeus);
+    */
+
+    /*
+    class spaceShuttle{
+        constructor (targetPlanet){
+            this.targetPlanet = targetPlanet;
+        }
+        updatePlanet(newPlanet){
+            this.targetPlanet = newPlanet;
+        }
+    }
+
+    var beauty = new spaceShuttle("Venus");
+    console.log(beauty);
+    beauty.updatePlanet("Naptune");
+    console.log(beauty);
+    */
+
+    /*
+    function makeClass (){
+        class Vegetable{
+            constructor (color){
+                this.color = color;
+            }
+        }
+        return Vegetable;
+    }
+    let Veggies = makeClass();
+    // console.log(Veggies);
+    let tomato = new Veggies("Red");
+    console.log(tomato);
+    */
+    /*
+    class Book{
+        constructor (author){
+            this._writer = author;
+        }
+        // Getter
+        get author(){
+            return this._writer;
+        }
+        // Setter
+        set author(newAuthor){
+            this._writer = newAuthor;
+        }
+    }
+
+    let safari = new Book("Nagendra Vijay");
+    console.log(safari.author);
+    safari.author = "Vijaygupta Maurya";
+    console.log(safari.author);
+    */
+
+    
+</script>
+</html>

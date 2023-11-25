@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="module">
+    // Single export-import
+    /*
+    import { capitalizeString } from './nov19.js';
+    console.log(capitalizeString("hello world"));
+    */
+
+    import capitalizeString from './nov19.js';
+
+    // import { capitalizeString, PI } from './nov19_2.js';
+    // import { capitalizeString, PI, bar } from './nov19_2.js';
+    import { capitalizeString, PI } from './nov19_2.js';
+    console.log(capitalizeString('happy diwali'));
+    // let area = PI * 6 * 6;
+    let area = PI * bar;
+    console.log(area);
+</script>
+</html>
