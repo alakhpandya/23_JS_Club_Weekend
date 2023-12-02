@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Movie Franchise</title>
+    <link rel="stylesheet" href="first_page.css">
+</head>
+<body style="display: flex; justify-content: center; align-items: center;">
+<!-- <body> -->
+    <!-- <div id="main_part" style="margin: 10rem auto;"> -->
+    <div id="main_part" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div id="movie_title"><h3>Favourite Movie Franchise</h3></div>
+        <div class="movie-name favourite-movie">The Matrix</div>
+        <div class="movie-name">Star Wars</div>
+        <div class="movie-name">Harry Potter</div>
+        <div class="movie-name favourite-movie">Lord of the Rings</div>
+        <div class="movie-name">Marvel</div>
+    </div>
+</body>
+<script>
+    // Selectors in js
+
+    // DOM: Document Object Model
+    /*
+    // Selecting by id
+    console.log(document.getElementById('movie_title'));
+
+    let main_part = document.getElementById('main_part');
+    console.log(main_part)
+
+    // Selecting by class
+    let movie_name = document.getElementsByClassName('movie-name');
+    console.log(movie_name);
+
+    // Selecting by tag name
+    let all_divs = document.getElementsByTagName('div');
+    console.log(all_divs);
+    */
+    
+    // Query Selector
+    /*
+    console.log(document.querySelector('#main_part'));
+    console.log(document.querySelector('.movie-name'));
+    console.log(document.querySelector('div'));
+    */
+
+    // Query Selector All
+    // console.log(document.querySelectorAll('#main_part'));
+    // console.log(document.querySelectorAll('.movie-name'));
+    // console.log(document.querySelectorAll('div'));
+
+
+    // Styling the selected element through javascript
+    /*
+    let movie_title = document.getElementById('movie_title');
+    movie_title.style.color = "Yellow";
+
+    let all_movies = document.querySelectorAll('.movie-name');
+    for(let i = 0; i < all_movies.length; i++)
+    {
+        all_movies[i].style.color = "Orangered";
+    }
+    */
+
+    // Creating element using javascript
+    let new_movie = document.createElement('div');
+    // let text = prompt("Enter name of new movie:");
+    // new_movie.innerText = text;
+    new_movie.innerText = "DC";
+
+    let main_part = document.querySelector('#main_part');
+    // console.log(main_part);
+    main_part.appendChild(new_movie);
+
+    // console.log(main_part.getAttribute('style'));
+    // console.log(main_part.getAttribute('id'));
+    // main_part.setAttribute('class', 'new-temp-class');
+
+    new_movie.setAttribute('class', 'movie-name');
+
+    // What if we want to add a class to an element?
+    // new_movie.setAttribute('class', 'favourite-movie');  This will replace the class
+    console.log(new_movie.classList);
+    new_movie.classList.add('favourite-movie');
+
+    let LOTR = document.getElementsByClassName('movie-name')[3];
+    // console.log(LOTR.classList);
+    LOTR.classList.remove('favourite-movie');
+
+    LOTR.remove();
+</script>
+</html>
