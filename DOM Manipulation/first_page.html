@@ -64,6 +64,7 @@
     */
 
     // Creating element using javascript
+    /*
     let new_movie = document.createElement('div');
     // let text = prompt("Enter name of new movie:");
     // new_movie.innerText = text;
@@ -89,5 +90,41 @@
     LOTR.classList.remove('favourite-movie');
 
     LOTR.remove();
+    */
+</script>
+
+<script>
+    // Traversing through the DOM
+    
+    let sw = document.getElementsByClassName('movie-name')[1]
+    // console.log(sw.parentElement);
+    // console.log(sw.parentNode);
+
+    let main = document.getElementById('main_part');
+    // console.log(main.children.length);
+    // console.log(main.children);
+
+    // console.log(main.childNodes.length);
+    // console.log(main.childNodes);
+
+    // console.log(sw.parentElement.parentElement);
+    // console.log(sw.parentElement.parentElement.parentElement);
+    // console.log(sw.parentElement.parentElement.parentElement.parentElement);
+
+    // console.log(sw.parentNode.parentNode.parentNode.parentNode);
+    /*
+    console.log(main.firstChild);
+    console.log(main.firstElementChild);
+    console.log(main.lastChild);
+    console.log(main.lastElementChild);
+    */
+
+    // Traversing through siblings
+    // console.log(sw.nextSibling);
+    console.log(sw.nextElementSibling);
+    // console.log(sw.previousSibling);
+    console.log(sw.previousElementSibling);
+    console.log(sw.nextElementSibling.parentElement);
+    sw.nextElementSibling.parentElement.style.backgroundColor = "orangered";
 </script>
 </html>

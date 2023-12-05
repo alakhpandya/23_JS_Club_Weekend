@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Third.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="title">Event Listeners</div>
+    <div class="container">
+        <div class="boxes" id="left-box">Hide</div>
+        <div class="boxes" id="right-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tempora ullam corrupti qui impedit accusantium aliquam possimus alias maiores eum, nemo in sequi. Amet repellat voluptatem libero ipsum ad blanditiis quidem eum ipsam itaque hic, quia magni, repudiandae eaque vero. Maxime natus voluptatibus ad aliquam possimus quasi sunt eos illo, magnam obcaecati, nobis aliquid officiis ipsam placeat at est. Voluptate eaque eos quasi nesciunt recusandae debitis maiores accusantium asperiores amet quia nihil in, rerum consequatur architecto inventore consectetur esse dolore ipsa dolores nulla. Quas magnam non cumque incidunt eos reiciendis? Magni, nam iusto sapiente ipsa porro ut quisquam laboriosam laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quasi laborum exercitationem, nam rerum reiciendis perspiciatis iste iusto expedita dignissimos!</div>
+    </div>
+</body>
+<script>
+    let showHideBtn = document.getElementById('left-box');
+    let rightBox = document.getElementById('right-box');
+    showHideBtn.addEventListener('click', () => {
+        if (rightBox.classList.contains('hide')){
+            rightBox.classList.remove('hide');
+            showHideBtn.innerText = "Hide";
+            showHideBtn.style.width = "10%";
+        }
+        else{
+            rightBox.classList.add('hide');
+            showHideBtn.style.width = "100%";
+            showHideBtn.innerText = "Reveal";
+        }
+    })
+
+
+    // rightBox.style.display = 'Block';
+    //     ;
+    //     
+</script>
+</html>

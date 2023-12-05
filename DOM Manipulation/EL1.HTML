@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(180deg, rgba(0,9,36,1) 0%, rgba(24, 47, 52, 0.8) 95%) ; 
+        color: white;
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container>h1 {
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+    .subcontainer {
+        display: flex;
+        border: solid white;
+        gap: 1.5rem;
+        border-radius: 15px;
+        padding: 6rem 3rem;
+    }
+
+    .boxes {
+        border: solid white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        border-radius: 10%;
+    }
+
+    .btn {
+        padding: 5px 15px;
+        border: solid white;
+        border-radius: 5px;
+        background-color: transparent;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Event Listeners</h1>
+        <div class="subcontainer">
+            <div class="boxes" id="box1">
+                <p>Example 1</p>
+                <button onclick="alert('I love JavaScript!')" class="btn">Enter</button>
+            </div>
+            <div class="boxes" id="box2">
+                <p>Example 2</p>
+                <button class="btn">Enter</button>
+            </div>
+            <div class="boxes" id="box3">
+                <p>Example 3</p>
+                <button onclick="showAlert()" class="btn">Enter</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Event Listener
+    const btn2 = document.getElementsByClassName('btn')[1];
+
+    /*
+    let showAlert = () => {
+        alert('You love JavaScript!');
+    }
+    btn2.addEventListener('click', showAlert);
+    */
+    /*
+    btn2.addEventListener('click', () => {
+        alert("You love Javascript!");
+    })
+
+    let showAlert = () => {
+        alert('We love JavaScript!');
+    }
+    */
+
+    let ex3 = document.querySelector('#box3');
+    ex3.addEventListener('mouseenter', () => {
+        ex3.style.backgroundColor = 'yellow';
+    })
+    ex3.addEventListener('mouseleave', () => {
+        ex3.style.backgroundColor = 'red';
+    })
+
+    let body = document.querySelector('body');
+    body.addEventListener('mouseleave', () => alert('Wait, Last minute offer just for you!'))
+</script>
+</html>
