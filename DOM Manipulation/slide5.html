@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-5</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background: linear-gradient(180deg, rgba(0, 9, 36, 1) 0%, rgba(24, 47, 52, 0.49267629415047265) 95%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    
+    #box{
+        width: 250px;
+        border: 2px solid white;
+        padding: 3rem;
+        border-radius: 5%;
+        text-align: center;
+        border-radius: 10px;
+        height: 410px;
+    }
+    
+    #box .game_box{
+        border: 1.5px solid white;
+        width: 150px;
+        height: 45px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        font-size: 23px;
+        color: white;
+        border-radius: 10px;
+    }
+</style>
+<body style=" display: flex; text-align: center;justify-content: center;">
+
+    <div id="box">
+        <div class="game_box">Football</div>
+        <div class="game_box">BasketBall</div>
+        <div class="game_box">Boxing</div>
+        <div class="game_box">Tennis</div>
+        <div class="game_box">Golf</div>
+        <div class="game_box">Rugby</div>
+    </div>
+</body>
+<script>
+    /*
+        let sports = document.getElementsByClassName('game_box');
+        for(let i = 0; i < sports.length; i++){
+            sports[i].addEventListener('click', () => {
+                sports[i].style.backgroundColor = "Green";
+            })
+        }
+    */
+    
+    let box = document.getElementById('box');
+    box.addEventListener('click', (e) => {
+        // console.log(e.target);
+        e.target.style.backgroundColor = "Green";
+    })
+</script>
+</html>
