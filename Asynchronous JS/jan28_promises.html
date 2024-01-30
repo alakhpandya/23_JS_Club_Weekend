@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+        1. Receive Order                        2
+        2. Chop the vegetables                  4
+        3. add the masala, water, noodles and   1
+        vegetables to the bowl
+        4. Boil                                 3
+        5. take the plate/bowl                  1
+        6. prepare noodles/sandwich             4
+        7. Serve the order                      1
+    */
+    let is_open = true;
+    let order = (time, work) => {
+        return new Promise((resolve, reject) => {
+            if (is_open){
+                setTimeout(() => {
+                    resolve(work());
+                }, time)
+            }
+            else{
+                reject(console.log("Sorry, our shop is closed."));
+            }
+        });
+    }
+
+    order(0, () => console.log("Receiving order..."))
+
+    .then(() => {
+        return order(2000, () => console.log("Order of Veg maggie recieved, cooking started..."))
+    })
+    .then(() => {
+        return order(4000, () => console.log("Vegetables are chopped..."))
+    })
+    .then(() => {
+        return order(1000, () => console.log("masala, water, noodles and vegetables are added to the bowl..."))
+    })
+    .then(() => {
+        return order(3000, () => console.log("Boiling completed..."))
+    })
+    .then(() => {
+        return order(1000, () => console.log("Bowl Taken."))
+    })
+    .then(() => {
+        return order(4000, () => console.log("Noodles are prepared."))
+    })
+    .then(() => {
+        return order(1000, () => console.log("Here is your order!"))
+    })
+
+    .catch(() => {
+        console.log("Please come back between 11am to 10pm");
+    })
+    
+    .finally(() => {
+        console.log("Thanks for considering us, please visit again!");
+    })
+</script>
+</html>
